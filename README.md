@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PublicationsManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# Publications_Manager
+El siguiente código incorpora 3 funcionalidades principales. Login, visualización de perfil y gestión de publicaciones. 
+>>>>>>> 9785cf0cc074536ae9f2e9b8fc28fe236795479f
