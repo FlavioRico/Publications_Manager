@@ -1,0 +1,20 @@
+/**/
+.project-imageContainer{
+  width: 300px;
+  /* width: 50%; */
+}
+
+/*PARA IMAGENES RESPONSIVAS, RESPECTO AL CONTENEDOR PADRE*/
+.project-imageContainer img{
+  max-width: 25%;
+}
+
+.project-imageContainer{
+  width: auto;
+  text-align: center;
+}
+
+.container-text{
+  color: #929292;
+  font-size: 20px;
+}

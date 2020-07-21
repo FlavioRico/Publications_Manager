@@ -12,4 +12,5 @@ export class HeaderLoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logo_FYG: string = 'assets/images/F&G_logo.png';
 }
