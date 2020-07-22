@@ -11,5 +11,4 @@ export class FooterLoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
