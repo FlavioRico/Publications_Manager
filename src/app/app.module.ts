@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileComponent } from './profile/profile.component';
     MenuComponent,
     LoginComponent,
     PageNotFoundComponent,
-    ProfileComponent
+    ProfileComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
