@@ -11,3 +11,7 @@
 .text-footer{
     transition: 1s;
 }
+
+#footer{
+    padding: 10px;
+}
