@@ -3,14 +3,17 @@
         <div class="modal-content">
             <form class="col-12">
                 <div class="form-group">
-                    <input type="email" class="form-control" 
+                    <input type="email" [(ngModel)]="email" name="value-email" class="form-control" 
                     placeholder="e-mail">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" 
+                    <input type="password" [(ngModel)]="phone" name="value-phone" class="form-control" 
                     placeholder="phone">
                 </div>
-                <button type="submit" class="btn btn-primary" routerLink="/profile">Login</button>
+                <button (click)="login()" 
+                type="submit" class="btn btn-primary" 
+                routerLink="/profile/1">Login
+                </button>
             </form>
         </div>
     </div>

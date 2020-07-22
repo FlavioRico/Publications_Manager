@@ -6,10 +6,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-login.component.css']
 })
 export class DataLoginComponent implements OnInit {
+  email: string;
+  phone: number;
+  route: string;
 
   constructor() { }
+  // users = [
+  //   {
+  //     email: 'prueba@gmail.com',
+  //     phone: 10
+  //   }
+  // ];
 
   ngOnInit(): void {
+  }
+
+  // tslint:disable-next-line: typedef
+  login(){
+    console.log(this.email, this.phone);
+    // const conditionUser = this.email == this.users[0].email;
+    // const conditionPhone = this.phone == this.users[0].phone;
+    // if (conditionUser && conditionPhone){
+    //   this.route = '/profile';
+    //   console.log(this.route);
+    // }else{
+    //   this.route = '/**';
+    //   console.log(this.route);
+    // }
   }
 
 }
