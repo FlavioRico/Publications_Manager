@@ -14,6 +14,10 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PostsComponent } from './posts/posts.component';
+import { ButtonCreateComponent } from './button-create/button-create.component';
+import { PostsUserComponent } from './posts-user/posts-user.component';
+import { LayoutComponent } from './layout/layout.component';
+import { DataUserComponent } from './data-user/data-user.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { PostsComponent } from './posts/posts.component';
     LoginComponent,
     PageNotFoundComponent,
     ProfileComponent,
-    PostsComponent
+    PostsComponent,
+    ButtonCreateComponent,
+    PostsUserComponent,
+    LayoutComponent,
+    DataUserComponent
   ],
   imports: [
     BrowserModule,
