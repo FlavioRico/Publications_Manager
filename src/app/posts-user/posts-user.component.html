@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Information</th>
+        <th scope="col">Actions</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of posts; index as i">
+        <th scope="row"> {{ posts[i].id }} </th>
+        <td> {{ posts[i].title }} </td>
+        <td> {{ posts[i].body }} </td>
+        <td><button type="button" class="btn btn-danger">Delete</button></td>
+        <td><button type="button" class="btn btn-success">Edit</button></td>
+      </tr>
+    </tbody>
+
+</table>
