@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
   name: string = 'name User';
+  id = 2;
+
+  constructor() { }
   ngOnInit(): void {
   }
 }
