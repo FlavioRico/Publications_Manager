@@ -12,7 +12,7 @@
                 </div>
                 <button (click)="login()" 
                 type="submit" class="btn btn-primary" 
-                routerLink="/profile/1">Login
+                [routerLink]="['/profile/', id]">Login
                 </button>
             </form>
         </div>

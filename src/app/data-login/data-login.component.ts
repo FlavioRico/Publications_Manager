@@ -9,14 +9,8 @@ export class DataLoginComponent implements OnInit {
   email: string;
   phone: number;
   route: string;
-
+  id: number = 2;
   constructor() { }
-  // users = [
-  //   {
-  //     email: 'prueba@gmail.com',
-  //     phone: 10
-  //   }
-  // ];
 
   ngOnInit(): void {
   }
