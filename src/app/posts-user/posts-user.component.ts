@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../post.model';
 import { ActivatedRoute, Params} from '@angular/router';
 import { PostsService } from '../posts.service';
 
@@ -10,6 +9,7 @@ import { PostsService } from '../posts.service';
 })
 export class PostsUserComponent implements OnInit {
   posts;
+  post;
   id: number;
 
   constructor(
@@ -19,35 +19,33 @@ export class PostsUserComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      const id = params.id;
-      console.log(id);
-      this.fetchPosts(id);
+      // this.id = params.idPost;
+      this.id = 2;
+      console.log("Debug en posts user: ", params.idPost);
     }
     );
+    this.fetchPosts();
   }
-  fetchPosts(id: number){
-    this.postsService.getAllPosts(id).subscribe(posts => {
+  fetchPosts(){
+    this.postsService.getAllPosts(this.id).subscribe(posts => {
       this.posts = posts;
       console.log(this.posts);
     });
   }
 
-}
+  getPost(idPost: number){
+    this.postsService.getPost(idPost).subscribe(post => {
+      this.post = post;
+      console.log(this.post[0].body);
+    });
+  }
 
-// posts: Post[] = [
-//   {
-//     id: 1,
-//     title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
-//     body: 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
-//   },
-//   {
-//     id: 2,
-//     title: 'eum et est occaecati',
-//     body: 'ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit'
-//   },
-//   {
-//     id: 3,
-//     title: 'eum et est occaecati',
-//     body: 'ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit'
-//   }
-// ];
+  deletePostUser(idPost: number){
+    console.log(idPost);
+    this.postsService.deletePost(idPost).subscribe(rta => {
+      console.log(rta);
+    });
+    alert('Deleted post');
+  }
+
+}
