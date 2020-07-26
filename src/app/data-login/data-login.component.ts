@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-data-login',
@@ -6,27 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-login.component.css']
 })
 export class DataLoginComponent implements OnInit {
-  email: string;
+  id: number;
   phone: number;
   route: string;
-  id: number = 2;
-  constructor() { }
+
+  constructor(
+    private loginService: LoginService
+  ) { }
 
   ngOnInit(): void {
   }
 
   // tslint:disable-next-line: typedef
   login(){
-    console.log(this.email, this.phone);
-    // const conditionUser = this.email == this.users[0].email;
-    // const conditionPhone = this.phone == this.users[0].phone;
-    // if (conditionUser && conditionPhone){
-    //   this.route = '/profile';
-    //   console.log(this.route);
-    // }else{
-    //   this.route = '/**';
-    //   console.log(this.route);
-    // }
+    const user = {id: this.id, phone: this.phone};
+    this.loginService.logInUser(user).subscribe( data => {
+      console.log('el data es:', data);
+    });
+    console.log(this.id, this.phone);
   }
-
 }
